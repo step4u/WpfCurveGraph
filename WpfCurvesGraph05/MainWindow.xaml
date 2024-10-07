@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfCurvesGraph05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCurvesGraph05"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Image Name="ImageDisplay" Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="400" Height="400"/>
+        <Canvas Name="GraphCanvas" Width="400" Height="400" Background="LightGray" HorizontalAlignment="Right" Margin="10">
+            <Polyline Name="BezierCurve" Stroke="Black" StrokeThickness="2"/>
+            <Ellipse Name="ControlPoint1" Width="10" Height="10" Fill="Red" Cursor="Hand" MouseDown="ControlPoint_MouseDown" MouseMove="ControlPoint_MouseMove" MouseUp="ControlPoint_MouseUp"/>
+            <Ellipse Name="ControlPoint2" Width="10" Height="10" Fill="Red" Cursor="Hand" MouseDown="ControlPoint_MouseDown" MouseMove="ControlPoint_MouseMove" MouseUp="ControlPoint_MouseUp"/>
+        </Canvas>
+    </Grid>
+</Window>

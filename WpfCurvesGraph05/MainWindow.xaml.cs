@@ -83,6 +83,7 @@ namespace WpfCurvesGraph05
             activeControlPoint = null;
         }
 
+        double curvePoints = 100;
         private void DrawBezierCurve()
         {
             BezierCurve.Points.Clear();
@@ -93,9 +94,9 @@ namespace WpfCurvesGraph05
             Point p3 = new Point(GraphCanvas.Width, 0);
 
             // 곡선 그리기 (PolyLine에 점 추가)
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= curvePoints; i++)
             {
-                double t = i / 100.0;
+                double t = i / curvePoints;
                 Point point = CalculateBezierPoint(t, p0, p1, p2, p3);
                 BezierCurve.Points.Add(point);
             }

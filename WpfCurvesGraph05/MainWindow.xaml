@@ -8,10 +8,12 @@
         Title="MainWindow" Height="600" Width="800">
     <Grid>
         <Image Name="ImageDisplay" Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="400" Height="400"/>
-        <Canvas Name="GraphCanvas" Width="400" Height="400" Background="LightGray" HorizontalAlignment="Right" Margin="10">
-            <Polyline Name="BezierCurve" Stroke="Black" StrokeThickness="2"/>
-            <Ellipse Name="ControlPoint1" Width="10" Height="10" Fill="Red" Cursor="Hand" MouseDown="ControlPoint_MouseDown" MouseMove="ControlPoint_MouseMove" MouseUp="ControlPoint_MouseUp"/>
-            <Ellipse Name="ControlPoint2" Width="10" Height="10" Fill="Red" Cursor="Hand" MouseDown="ControlPoint_MouseDown" MouseMove="ControlPoint_MouseMove" MouseUp="ControlPoint_MouseUp"/>
-        </Canvas>
+        <Viewbox Width="400" Height="400" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">
+            <Canvas Name="GraphCanvas" Width="256" Height="256" Background="LightGray">
+                <Polyline Name="BezierCurve" Stroke="Black" StrokeThickness="2"/>
+                <Ellipse Name="ControlPoint1" Width="10" Height="10" Fill="Red" Cursor="Hand" MouseDown="ControlPoint_MouseDown" MouseMove="ControlPoint_MouseMove" MouseUp="ControlPoint_MouseUp"/>
+                <Ellipse Name="ControlPoint2" Width="10" Height="10" Fill="Red" Cursor="Hand" MouseDown="ControlPoint_MouseDown" MouseMove="ControlPoint_MouseMove" MouseUp="ControlPoint_MouseUp"/>
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Window>
